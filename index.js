@@ -1,5 +1,5 @@
 const express = require('express');
-const logger = require('./Logger')("APP") ;;
+const logger = require('./fileLogger')("APP") ;;
 // const logger =  getLogger
 const bodyParser = require('body-parser');
 
