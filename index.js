@@ -1,5 +1,5 @@
 const express = require('express');
-const logger = require('./fileLogger')("APP") ;;
+const logger = require('./logger')("index") ;;
 // const logger =  getLogger
 const bodyParser = require('body-parser');
 
@@ -12,12 +12,9 @@ app.use(  (req , res  , next  ) =>    {
     logger.setLogData(req.body)
     next();
 })
-app.get('/login' , (req , res) => {
-    res.send("Login")
-})
+ 
  
 app.listen(3000, () => { 
     const obj = { name: 'abdul rehman ', age: '23' }
-    logger.info(  logger.getFunName() ,  "  "    );
-
+    logger.info( 'listen' ,  "  "    );
 });  
